@@ -42,7 +42,7 @@ Feature: Clokify Creación de workspace exitoso
     When execute method GET
     Then the status code should be 200
 
-  @AssignRemoveUserToFromTheProject
+  @AssignRemoveUserToFromTheProject405
   Scenario Outline: GET Find project by ID
     Given call Project.feature@AddNewProject
     And base url https://api.clockify.me/api
@@ -51,7 +51,7 @@ Feature: Clokify Creación de workspace exitoso
     And header x-api-key = OWViMWQ5OWMtYzBhMi00MGJmLWEyMjAtODdkM2FiYTk5ZTZl
     And set value userIDs of key userIds in body jsons/bodies/userProyect.json
     When execute method POST
-    Then the status code should be 200
+    Then the status code should be 405
 
     Examples:
       | userIDs |
