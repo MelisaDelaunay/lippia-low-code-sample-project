@@ -22,7 +22,7 @@ Feature: Clokify Creación de workspace exitoso
     And endpoint /v1/workspaces/{{workspaceId}}/projects
     And header Content-Type = application/json
     And header x-api-key = OWViMWQ5OWMtYzBhMi00MGJmLWEyMjAtODdkM2FiYTk5ZTZl
-    And set value nameProyecto of key name in body jsons/bodies/NuevoProyecto.json
+    And set value <nameProyecto> of key name in body jsons/bodies/NuevoProyecto.json
     When execute method POST
     Then the status code should be 201
     * define proyectoId = response.id

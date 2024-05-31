@@ -8,7 +8,7 @@ Feature: Clokify Creación de workspace exitoso
 
   @AddNewWorkspace
   Scenario Outline: POST Workspace
-    And set value nameWorkspace of key name in body jsons/bodies/NuevoWorkspace.json
+    And set value <nameWorkspace> of key name in body jsons/bodies/NuevoWorkspace.json
     When execute method POST
     Then the status code should be 201
     * define workspaceId = response.id
