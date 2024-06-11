@@ -26,6 +26,7 @@ Feature: Clokify Time Entry
     And endpoint /v1/workspaces/{{workspaceId}}/time-entries/{{timeId}}
     And set value "2024-06-06T16:30:00Z" of key start in body jsons/bodies/NuevoTiempo.json
     And set value "2024-06-06T16:46:00Z" of key end in body jsons/bodies/NuevoTiempo.json
+    And set value "TaskCurso" of key description in body jsons/bodies/NuevoTiempo.json
     When execute method PUT
     Then the status code should be 200
     * define timeId = response.id
